@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) =>{
         }
     );
 
+    Genere.associate = (models) => {
+        Genere.hasMany(models.Book, { as: "book", foreignKey: "generes_id" });
+        Genere.belongsTo(models.Interest, { as: "interest", foreignKey: "generes_id" });
+    };
+
     return Genere;
 
 };

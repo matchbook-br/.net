@@ -10,6 +10,11 @@ module.exports = (sequelize, DataTypes) =>{
         }
     );
 
+    Interest.associate = (models) => {
+        Interest.hasMany(models.Genere, { as: "genere", foreignKey: "generes_id" });
+        Interest.belongsTo(models.User, { as: "user", foreignKey: "users_id" });
+    };
+
     return Interest;
 
 };

@@ -2,5 +2,6 @@
 
 Match Book
 
-![Logo Match Book](./matchbook-pi-dh/images/logo.png)
+
+![Logo Match Book](./images/logo.png)
 

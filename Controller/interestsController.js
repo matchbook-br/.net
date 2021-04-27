@@ -1,4 +1,5 @@
 const { Interest, sequelize } = require('../models');
+const {v4:uuidv4} = require('uuid');
 
 const interestsController = {
 
@@ -8,6 +9,18 @@ const interestsController = {
         return res.json(interests);
     },
 
+    create: async (req, res) =>{
+        const { users_id, generes_id } = req.body;
+
+        const newGeneres = await Genere.create({
+            id:uuidv4(),
+            users_id,
+            generes_id
+        })
+
+
+        return res.json(newGeneres);
+    },
     update: async (req, res) => {
         const { id } = req.params;
         const { users_id, generes_id } = req.body;

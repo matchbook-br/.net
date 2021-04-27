@@ -1,5 +1,10 @@
 const { User, sequelize } = require('../models');
 const bcrypt = require('bcryptjs');
+const {v4:uuidv4} = require('uuid');
+
+
+
+
 
 const usersController = {
 
@@ -13,8 +18,9 @@ const usersController = {
         const { name, password, email, date_of_birth, gender, phone_number, address_id } = req.body;
         
         const passwordCrypt = bcrypt.hashSync(password, 10);
-        
+       
         const newUsers = await User.create({
+            id:uuidv4(), 
             name,
             password: passwordCrypt,
             email,

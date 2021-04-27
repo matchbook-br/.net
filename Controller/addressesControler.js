@@ -1,4 +1,5 @@
 const { Address, sequelize } = require('../models');
+const {v4:uuidv4} = require('uuid');
 
 const addressesController = {
 
@@ -11,6 +12,7 @@ const addressesController = {
     create: async (req, res) => {
         const { city, state, neighborhood, cep, street, number, complement, users_id } = req.body;
         const newAddress = await Address.create({
+            id:uuidv4(),
             city,
             state,
             neighborhood,
@@ -29,6 +31,7 @@ const addressesController = {
         const { city, state, neighborhood, cep, street, number, complement, users_id } = req.body;
 
         const address = await Address.update({
+            id:uuidv4(),
             city,
             state,
             neighborhood,

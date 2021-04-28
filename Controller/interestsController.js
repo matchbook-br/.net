@@ -1,5 +1,5 @@
 const { Interest, sequelize } = require('../models');
-const {v4:uuidv4} = require('uuid');
+const { v4:uuidv4 } = require('uuid');
 
 const interestsController = {
 
@@ -9,18 +9,17 @@ const interestsController = {
         return res.json(interests);
     },
 
-    create: async (req, res) =>{
+    create: async (req, res) => {
         const { users_id, generes_id } = req.body;
-
-        const newGeneres = await Genere.create({
-            id:uuidv4(),
+        const newInterest = await Interest.create({
+            id: uuidv4(),
             users_id,
             generes_id
-        })
+        });
 
-
-        return res.json(newGeneres);
+        return res.json(newInterest);
     },
+
     update: async (req, res) => {
         const { id } = req.params;
         const { users_id, generes_id } = req.body;
@@ -34,8 +33,17 @@ const interestsController = {
 
 
         return res.json(interest);
-    }
+    },
 
+    delete: async (req, res) => {
+        const { id } = req.params;
+
+        const interest = await Interest.destroy({
+            where: { id }
+        });
+
+        return res.json(interest);
+    }
 }
 
 module.exports = interestsController;

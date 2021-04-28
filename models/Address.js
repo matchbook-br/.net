@@ -2,23 +2,22 @@ module.exports = (sequelize, DataTypes) => {
     
     const Address = sequelize.define(
         'Address', {
-            city: DataTypes.STRING,
-            state: DataTypes.STRING,
-            neighborhood: DataTypes.STRING,
-            cep: DataTypes.STRING,
             street: DataTypes.STRING,
             number: DataTypes.STRING,
             complement: DataTypes.STRING,
-            users_id: DataTypes.INTEGER
+            neighborhood: DataTypes.STRING,
+            city: DataTypes.STRING,
+            state: DataTypes.STRING,
+            zip_code: DataTypes.STRING,
         }, {
-            tableName: "address",
+            tableName: "addresses",
             timestamps: false
         }
     );
 
-    Address.associate = (models) => {
-        Address.hasOne(models.User, { as: "user", foreignKey: "address_id" });
-    };
+    // Address.associate = (models) => {
+    //     Address.hasOne(models.User, { as: "users", foreignKey: "addresses_id" });
+    // };
 
     return Address;
 

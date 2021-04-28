@@ -1,5 +1,6 @@
 const { User, sequelize } = require('../models');
 const bcrypt = require('bcryptjs');
+const { v4:uuidv4 } = require('uuid');
 
 const usersController = {
 
@@ -10,18 +11,19 @@ const usersController = {
     },
 
     create: async (req, res) => {
-        const { name, password, email, date_of_birth, gender, phone_number, address_id } = req.body;
+        const { name, email,  password, gender, date_of_birth, phone_number, addresses_id } = req.body;
         
         const passwordCrypt = bcrypt.hashSync(password, 10);
         
         const newUsers = await User.create({
+            id: uuidv4(),
             name,
-            password: passwordCrypt,
             email,
-            date_of_birth,
+            password: passwordCrypt,
             gender,
+            date_of_birth,
             phone_number,
-            address_id
+            addresses_id
         });
 
 
@@ -30,7 +32,7 @@ const usersController = {
 
     update: async (req, res) => {
         const { id } = req.params;
-        const { name, password, email, date_of_birth, gender, phone_number, address_id } = req.body;
+        const { name, email,  password, gender, date_of_birth, phone_number, addresses_id } = req.body;
 
         const user = await User.update({
             name,
@@ -39,7 +41,7 @@ const usersController = {
             date_of_birth,
             gender,
             phone_number,
-            address_id
+            addresses_id
         }, {
             where: { id }
         });

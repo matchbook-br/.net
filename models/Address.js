@@ -15,9 +15,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
 
-    // Address.associate = (models) => {
-    //     Address.hasOne(models.User, { as: "users", foreignKey: "addresses_id" });
-    // };
+    Address.associate = (models) => {
+        Address.hasOne(models.User, { as: "users", foreignKey: "addresses_id" });
+    };
 
     return Address;
 

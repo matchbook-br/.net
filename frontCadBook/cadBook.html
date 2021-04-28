@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadBook.css">
+    <title>Match Book</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="inicio">
+            <img src="images/logo.png" alt="logo" class="logo">
+            <p class="olaUsuario"></p>
+        </div>
+    </header>
+    <main>
+        <section class="menuCad">
+            <div class="container1">
+                <img src="images/biblioteca.jpg" alt="logo" class="background">
+                    <nav>
+                        <button class="botao1" type="menu">MATCHES</button>
+                        <button class="botao1" type="menu">LIVROS</button>
+                        <button class="botao1" type="menu">MEU PERFIL</button>
+                    </nav>
+                <H2>CADASTRE UM LIVRO</H2>
+                <img src="images/iconslivro.png" alt="imagem de livro" class="imgBook">
+            </div>
+        </section>
+
+        <section class="cadBook">
+            <div class="container2">
+                <div class="name">
+                    <form class="formato">
+                    <strong class="name">TÍTULO:</strong>
+                        <input type="text" name="name" id="input_titulo" placeholder="Título do livro">
+                    </form>
+                </div>
+
+                <div class="author">
+                    <strong class="author">AUTOR (A):</strong>
+                        <form class="formato">
+                            <input type="text" name="author" id="input_author" placeholder="Nome do autor(a)">
+                        </form>
+                </div>
+
+                <div class="publisher">
+                    <strong class="editora">EDITORA:</strong>
+                        <form class="formato">
+                            <input type="text" name="publisher" id="input_publisher" placeholder="Editora do livro">
+                        </form>
+                </div>
+
+                <div class="generes">
+                    <strong class="generes">GÊNERO:</strong>
+                    <form class="formato">
+                        <select id="generes" name="generes">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat" selected>Fiat</option>
+                            <option value="audi">Audi</option>
+                          </select>
+                        <input type="listbox" name="generes" id="input_generes" placeholder="Gênero do livro">
+                    </form>
+
+                </div>
+
+                <div class="description">
+                    <strong class="description">SINOPSE:</strong>
+                    <form class="formato">
+                        <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
+                    </form>
+
+                </div>     
+                
+                <div class="cover">
+                    <strong class="cover">CARREGAR FOTO DA CAPA DO LIVRO:</strong>
+                    <form class="formato">
+                        <input type="file" name="cover" id="input_cover" placeholder="upload" multiple>
+                    </form>
+
+                </div>
+                
+                <div class="cta-cadastro">
+                    <button class="botao" type="submit">CADASTRAR LIVRO</button>
+    
+                </div>
+                
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="roda-pe">
+                <h3>Match Book © 2021. Todos os direitos reservados</h3>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

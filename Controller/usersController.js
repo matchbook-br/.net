@@ -14,7 +14,7 @@ const usersController = {
         const { name, email,  password, gender, date_of_birth, phone_number, addresses_id } = req.body;
         
         const passwordCrypt = bcrypt.hashSync(password, 10);
-        
+       
         const newUsers = await User.create({
             id: uuidv4(),
             name,

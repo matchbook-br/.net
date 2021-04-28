@@ -3,6 +3,7 @@ const { request, response } = require('express');
 const { Book, sequelize } = require('../models/');
 const { v4:uuidv4 } = require('uuid');
 
+
 const booksController = {
     index: async (request, response) => {
         let books = await Book.findAll();

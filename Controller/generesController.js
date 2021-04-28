@@ -1,4 +1,6 @@
 const { Genere, sequelize } = require('../models');
+const { v4:uuidv4 } = require('uuid');
+
 
 const generesController = {
 
@@ -11,6 +13,7 @@ const generesController = {
     create: async (req, res) => {
         const { nameGeneres } = req.body;
         const newGeneres = await Genere.create({
+            id: uuidv4(),
             nameGeneres
         });
 

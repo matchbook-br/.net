@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) =>{
     
     const Genere = sequelize.define(
-        'Genere',{
+        'Genere', {
             nameGeneres: DataTypes.STRING,
         }, {
             tableName: "generes",
@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) =>{
     );
 
     Genere.associate = (models) => {
-        Genere.hasMany(models.Book, { as: "book", foreignKey: "generes_id" });
-        Genere.hasMany(models.Interest, { as: "interest", foreignKey: "generes_id" });
+        Genere.hasMany(models.Book, { as: "books", foreignKey: "generes_id" });
+        Genere.hasMany(models.Interest, { as: "interests", foreignKey: "generes_id" });
     };
 
     return Genere;

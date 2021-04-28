@@ -1,6 +1,8 @@
 
 const { request, response } = require('express');
 const { Book, sequelize } = require('../models/');
+const { v4:uuidv4 } = require('uuid');
+
 
 const booksController = {
     index: async (request, response) => {
@@ -13,6 +15,7 @@ const booksController = {
         let { name, author, description, publisher, generes_id, users_id } = request.body;
 
         let newBook = await Book.create({
+            id: uuidv4(),
             name,
             author,
             description,

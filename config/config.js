@@ -1,6 +1,6 @@
 module.exports = {
     "username": "root",
-    "password": "toor",
+    "password": "3428",
     "database": "matchbook",
     "host": "127.0.0.1",
     "dialect": "mysql",

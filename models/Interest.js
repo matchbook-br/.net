@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) =>{
     
     const Interest = sequelize.define(
-        'Interest',{
-            users_id: DataTypes.INTEGER,
-            generes_id: DataTypes.INTEGER
+        'Interest', {
+            users_id: DataTypes.STRING,
+            generes_id: DataTypes.STRING
         }, {
             tableName: "interests",
             timestamps: false
@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) =>{
     );
 
     Interest.associate = (models) => {
-        Interest.belongsTo(models.Genere, { as: "genere", foreignKey: "generes_id" });
-        Interest.belongsTo(models.User, { as: "user", foreignKey: "users_id" });
+        Interest.belongsTo(models.Genere, { as: "generes", foreignKey: "generes_id" });
+        Interest.belongsTo(models.User, { as: "users", foreignKey: "users_id" });
     };
 
     return Interest;

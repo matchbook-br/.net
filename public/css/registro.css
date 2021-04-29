@@ -106,28 +106,6 @@ main h2{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.nome{
-    position: absolute;
-    width: 162px;
-    height: 46px;
-    left: 140px;
-    top: 171px;
-
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 65px;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 section.projects .container {
     display: flex;
     justify-content: space-between;
@@ -137,23 +115,47 @@ section.projects .container {
 
 }
 
-.dados form input{
+
+.name{
+    position: absolute;
+    width: 162px;
+    height: 46px;
+    left: 140px;
+    top: 150px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.form-name input{
     position: absolute;
     width: 370px;
     height: 56px;
     left: 133px;
-    top: 217px;
+    top: 190px;
 
     background: #DEDEDE;
     border-radius: 10px;
 }
 
-.endereco{
+.email{
     position: absolute;
     width: px;
     height: 46px;
     left: 140px;
-    top: 314px;
+    top: 260px;
 
     font-family: Roboto Condensed;
     font-style: normal;
@@ -171,23 +173,23 @@ section.projects .container {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.email form input{
+.form-email input{
     position: absolute;
     width: 370px;
     height: 56px;
     left: 133px;
-    top: 361px;
+    top: 300px;
     
     background: #DEDEDE;
     border-radius: 10px;
 }
 
-.sexo{
+.telefone{
     position: absolute;
-    width: 162px;
+    width: px;
     height: 46px;
-    left: 810px;
-    top: 171px;
+    left: 140px;
+    top: 370px;
 
     font-family: Roboto Condensed;
     font-style: normal;
@@ -205,61 +207,122 @@ section.projects .container {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.genero form input{
+.form-telefone input{
     position: absolute;
-    width: 358px;
+    width: 370px;
     height: 56px;
-    left: 810px;
-    top: 217px;
+    left: 133px;
+    top: 410px;
+    
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+.genero{
+    position: absolute;
+width: 162px;
+height: 46px;
+left: 748px;
+top: 150px;
+
+font-family: Roboto Condensed;
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 65px;
+/* or 271% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-genero input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 748px;
+    top: 190px;
 
     background: #DEDEDE;
     border-radius: 10px;
 }
 
-.data_de_nascimento{
+.nascimento{
     position: absolute;
     width: 298px;
     height: 46px;
-    left: 810px;
-    top: 314px;
+    left: 748px;
+    top: 260px;
 
     font-family: Roboto Condensed;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
     line-height: 65px;
-
-
+    /* or 271% */
+    
     display: flex;
     align-items: center;
     text-align: center;
-
+    
     color: #000000;
-
+    
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.nascimento form input{
+.form-data input{
     position: absolute;
-    width: 358px;
+    width: 370px;
     height: 56px;
-    left: 810px;
-    top: 361px;
+    left: 748px;
+    top: 300px;
 
     background: #DEDEDE;
     border-radius: 10px;
-
-
 }
 
+.senha{
+    position: absolute;
+    width: 298px;
+    height: 46px;
+    left: 748px;
+    top: 370px;
 
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 65px;
+    /* or 271% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-senha input{
+    position: absolute;
+    width: 370px;
+    height: 56px;
+    left: 748px;
+    top: 410px;
+
+    background: #DEDEDE;
+    border-radius: 10px;
+}
 
 .cta-cadastro button
 {
-   
-    
 
- 
     position: absolute;
     width: 200px;
     height: 34px;
@@ -274,7 +337,6 @@ section.projects .container {
 }
 
 .botao{
-    
 
     font-family: Roboto Condensed;
     font-style: normal;

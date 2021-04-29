@@ -27,7 +27,7 @@ const usersController = {
             gender,
             date_of_birth,
             phone_number,
-            addresses_id
+            addresses_id 
         });
 
 

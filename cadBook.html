@@ -33,14 +33,25 @@
             </article>
             <article>
                     <div class="container-form">
-                        <form class="form">
-                            <strong class="name">TÍTULO:</strong>
-                                <input type="text" name="name" id="input_titulo" placeholder="Título do livro">
-                            <strong class="author">AUTOR (A):</strong>
+                        <form>
+                            <div class="form-name">
+                               <strong class="name">TÍTULO:</strong>
+                                <input type="text" name="name" id="input_titulo" placeholder="Título do livro"> 
+                            </div>   
+                            
+                            <div class="form-author">
+                                <strong class="author">AUTOR (A):</strong>
                                 <input type="text" name="author" id="input_author" placeholder="Nome do autor(a)">
-                            <strong class="editora">EDITORA:</strong>
+                            </div>
+                                
+                            
+                            <div class="form-publisher">
+                                <strong class="publisher">EDITORA:</strong>
                                 <input type="text" name="publisher" id="input_publisher" placeholder="Editora do livro">
-                            <strong class="generes">GÊNERO:</strong>
+                            </div>
+                                
+                            <div class="form-generes">
+                                <strong class="generes">GÊNERO:</strong>
                                 <select id="generes" name="generes">
                                     <option value="Administração, Negócios e Economia">Administração, Negócios e Economia</option>
                                     <option value="Arte, Cinema e Fotografia">Arte, Cinema e Fotografia</option>
@@ -73,10 +84,18 @@
                                     <option value="Sociedade e Ciências Sociais">Sociedade e Ciências Sociais</option>
                                     <option value="Turismo e Viagem">Turismo e Viagem</option>
                                 </select>
-                            <strong class="description">SINOPSE:</strong>
+                            </div>
+                                
+                            <div class="form-description">
+                                <strong class="description">SINOPSE:</strong>
                                 <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
-                            <strong class="cover">FOTO DA CAPA DO LIVRO:</strong>
-                                <input type="file" name="cover" id="input_cover" placeholder="upload" multiple>
+                            </div>
+
+                            <div class="form-cover">
+                                <strong class="cover">FOTO DA CAPA DO LIVRO:</strong>
+                                    <input type="file" name="cover" id="input_cover" placeholder="upload" multiple>
+                            </div>
+
                         </form>
                     </div>
                 

@@ -68,6 +68,14 @@
 
 .container-form {
     position: absolute;
-    margin: 80px 250px;
-    align-content: flex-start;
+    margin: 100px 450px;
+}
+
+.container-form form{
+    position: absolute;
+    margin: 100px 450px;
+}
+
+.container-form form .form-name {
+    padding: 30px;
 }

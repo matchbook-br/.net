@@ -1,0 +1,27 @@
+<!-- views/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+
+<body>
+    <%- include('partials/header_before') %>
+    <main>
+        <h2><strong>VAMOS COMEÇAR</strong></h2>
+            <span><strong>Ao clicar em Entrar voce concorda com os nossos termos.</strong></span>
+            <div class="botoes">
+                <div class="btn-google">
+                    <button type="submit"><img src="../public/img/google-logo.png"><strong>ENTRAR COM O GOOGLE</strong></button>
+                </div>
+                <div class="btn-facebook">
+                    <button type="submit"><img src="../public/img/facebook-logo.png"><strong>ENTRAR COM O FACEBOOK</strong></button>
+                </div>
+                <div class="btn-voltar">
+                    <button type="submit"><strong>VOLTAR</strong></button>
+                </div>
+            </div>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+
+</html>

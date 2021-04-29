@@ -9,7 +9,10 @@ const addressesController = {
         return res.json(addresses);
     },
 
-
+    endereco: (req, res) => {
+        return res.render('endereco')
+    },
+    
     create: async (req, res) => {
         const { street, number, complement, neighborhood, city, state, zip_code } = req.body;
         const newAddress = await Address.create({

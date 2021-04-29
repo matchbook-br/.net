@@ -16,109 +16,75 @@
         </div>
     </header>
     <main>
-        <section class="menuCad">
-            <div class="container1">
-                <img src="public/images/biblioteca.png" alt="logo" class="background">
-                    <nav>
-                        <button class="botao1" type="menu">MATCHES</button>
-                        <button class="botao1" type="menu">LIVROS</button>
-                        <button class="botao1" type="menu">MEU PERFIL</button>
-                    </nav> 
-            </div>
-            <div class="container2">
-                <H2>CADASTRE UM LIVRO</H2>
-                <img src="public/images/iconslivro.png" alt="imagem de livro" class="imgBook">  
-            </div> 
-            
-        </section>
-
-        <section class="cadBook">
-            <div class="container3">
-                <div class="name">
-                    <form class="formato">
-                    <strong class="name">TÍTULO:</strong>
-                        <input type="text" name="name" id="input_titulo" placeholder="Título do livro">
-                    </form>
+        <section class="cadbook">
+            <article>
+                <div class="container-action">
+                    <img src="public/images/bibliobook.png" alt="logo" class="background">
+                        <nav>
+                            <button class="botao-matches" type="menu">MATCHES</button>
+                            <button class="botao-livros" type="menu">LIVROS</button>
+                            <button class="botao-perfil" type="menu">MEU PERFIL</button>
+                        </nav> 
+                        <h2>CADASTRE UM LIVRO</h2>
                 </div>
-
-                <div class="author">
-                    <strong class="author">AUTOR (A):</strong>
-                        <form class="formato">
-                            <input type="text" name="author" id="input_author" placeholder="Nome do autor(a)">
+                <div class="container-btnvoltar">
+                    <button class="voltar" type="button">VOLTAR</button>
+                </div>
+            </article>
+            <article>
+                    <div class="container-form">
+                        <form class="form">
+                            <strong class="name">TÍTULO:</strong>
+                                <input type="text" name="name" id="input_titulo" placeholder="Título do livro">
+                            <strong class="author">AUTOR (A):</strong>
+                                <input type="text" name="author" id="input_author" placeholder="Nome do autor(a)">
+                            <strong class="editora">EDITORA:</strong>
+                                <input type="text" name="publisher" id="input_publisher" placeholder="Editora do livro">
+                            <strong class="generes">GÊNERO:</strong>
+                                <select id="generes" name="generes">
+                                    <option value="Administração, Negócios e Economia">Administração, Negócios e Economia</option>
+                                    <option value="Arte, Cinema e Fotografia">Arte, Cinema e Fotografia</option>
+                                    <option value="Artesanato, Casa e Estilo de Vida" selected>Artesanato, Casa e Estilo de Vida</option>
+                                    <option value="Autoajuda">Autoajuda</option>
+                                    <option value="Biografias e Histórias Reais">Biografias e Histórias Reais</option>
+                                    <option value="Ciências">Ciências</option>
+                                    <option value="Computação, Informática e Mídias Digitais">Computação, Informática e Mídias Digitais</option>
+                                    <option value="Crônicas, Humor e Entretenimento">Crônicas, Humor e Entretenimento</option>
+                                    <option value="Direito">Direito</option>
+                                    <option value="Erótico">Erótico</option>
+                                    <option value="Esportes e Lazer">Esportes e Lazer</option>
+                                    <option value="Fantasia, Horror e Ficção Científica">Fantasia, Horror e Ficção Científica</option>
+                                    <option value="Gastronomia e Culinária">Gastronomia e Culinária</option>
+                                    <option value="HQs, Mangás e Graphic Novels">HQs, Mangás e Graphic Novels</option>
+                                    <option value="História">História</option>
+                                    <option value="Infantil">Infantil</option>
+                                    <option value="Inglês e Outras Línguas">Inglês e Outras Línguas</option>
+                                    <option value="Jovens e Adolescentes">Jovens e Adolescentes</option>
+                                    <option value="LGBT">LGBT</option>
+                                    <option value="Literatura e Ficção">Literatura e Ficção</option>
+                                    <option value="Língua, Linguística e Redação">Língua, Linguística e Redação</option>
+                                    <option value="Medicina">Medicina</option>
+                                    <option value="Policial, Suspense e Mistério">Policial, Suspense e Mistério</option>
+                                    <option value="Política">Política</option>
+                                    <option value="Referência">Referência</option>
+                                    <option value="Religião e Espiritualidade">Religião e Espiritualidade</option>
+                                    <option value="Romance">Romance</option>
+                                    <option value="Saúde e Família">Saúde e Família</option>
+                                    <option value="Sociedade e Ciências Sociais">Sociedade e Ciências Sociais</option>
+                                    <option value="Turismo e Viagem">Turismo e Viagem</option>
+                                </select>
+                            <strong class="description">SINOPSE:</strong>
+                                <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
+                            <strong class="cover">FOTO DA CAPA DO LIVRO:</strong>
+                                <input type="file" name="cover" id="input_cover" placeholder="upload" multiple>
                         </form>
-                </div>
-
-                <div class="publisher">
-                    <strong class="editora">EDITORA:</strong>
-                        <form class="formato">
-                            <input type="text" name="publisher" id="input_publisher" placeholder="Editora do livro">
-                        </form>
-                </div>
-
-                <div class="generes">
-                    <strong class="generes">GÊNERO:</strong>
-                    <form class="formato">
-                        <select id="generes" name="generes">
-                            <option value="Administração, Negócios e Economia">Administração, Negócios e Economia</option>
-                            <option value="Arte, Cinema e Fotografia">Arte, Cinema e Fotografia</option>
-                            <option value="Artesanato, Casa e Estilo de Vida" selected>Artesanato, Casa e Estilo de Vida</option>
-                            <option value="Autoajuda">Autoajuda</option>
-                            <option value="Biografias e Histórias Reais">Biografias e Histórias Reais</option>
-                            <option value="Ciências">Ciências</option>
-                            <option value="Computação, Informática e Mídias Digitais">Computação, Informática e Mídias Digitais</option>
-                            <option value="Crônicas, Humor e Entretenimento">Crônicas, Humor e Entretenimento</option>
-                            <option value="Direito">Direito</option>
-                            <option value="Erótico">Erótico</option>
-                            <option value="Esportes e Lazer">Esportes e Lazer</option>
-                            <option value="Fantasia, Horror e Ficção Científica">Fantasia, Horror e Ficção Científica</option>
-                            <option value="Gastronomia e Culinária">Gastronomia e Culinária</option>
-                            <option value="HQs, Mangás e Graphic Novels">HQs, Mangás e Graphic Novels</option>
-                            <option value="História">História</option>
-                            <option value="Infantil">Infantil</option>
-                            <option value="Inglês e Outras Línguas">Inglês e Outras Línguas</option>
-                            <option value="Jovens e Adolescentes">Jovens e Adolescentes</option>
-                            <option value="LGBT">LGBT</option>
-                            <option value="Literatura e Ficção">Literatura e Ficção</option>
-                            <option value="Língua, Linguística e Redação">Língua, Linguística e Redação</option>
-                            <option value="Medicina">Medicina</option>
-                            <option value="Policial, Suspense e Mistério">Policial, Suspense e Mistério</option>
-                            <option value="Política">Política</option>
-                            <option value="Referência">Referência</option>
-                            <option value="Religião e Espiritualidade">Religião e Espiritualidade</option>
-                            <option value="Romance">Romance</option>
-                            <option value="Saúde e Família">Saúde e Família</option>
-                            <option value="Sociedade e Ciências Sociais">Sociedade e Ciências Sociais</option>
-                            <option value="Turismo e Viagem">Turismo e Viagem</option>
-                          </select>
-                    </form>
-
-                </div>
-
-                <div class="description">
-                    <strong class="description">SINOPSE:</strong>
-                    <form class="formato">
-                        <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
-                    </form>
-
-                </div>     
+                    </div>
                 
-                <div class="cover">
-                    <strong class="cover">FOTO DA CAPA DO LIVRO:</strong>
-                    <form class="formato">
-                        <input type="file" name="cover" id="input_cover" placeholder="upload" multiple>
-                    </form>
-
-                </div>
-                
-                <div class="cta-cadastro">
-                    <button class="botao" type="submit">CADASTRAR LIVRO</button>
-    
-                </div>
-                
-            </div>
-
+                    <div class="cta-cadastro">
+                        <button class="botao" type="submit">CADASTRAR LIVRO</button>
+                    </div>     
+                </article>
         </section>
-
     </main>
 
     <footer>
@@ -128,6 +94,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

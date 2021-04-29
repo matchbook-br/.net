@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 
+* {
+    box-sizing: border-box;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+  
+  }
+
 .container .inicio{
     position: absolute;
     width: 1318px;
     height: 63px;
     left: 0px;
     top: 0px;
-
     background: #C186DD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.menuCad .container1 img {
+.container-action img {
     position: absolute;
     width: 401px;
     height: 581px;
@@ -21,8 +29,45 @@
     background: linear-gradient(180deg, rgba(117, 163, 205, 0.72) 0%, rgba(193, 134, 221, 0.56) 77.6%), url(image.png);
 }
 
-.menuCad .container2 img {
-    height: 30px;
+.container-action nav {
+    position: absolute;
+    margin: 70px 50px;
+    justify-content: space-around;
 }
 
+.container-action button {
+    padding: 5px;
+    margin: 10px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+}
 
+.container-action button:hover {
+    background-color: rgba(117, 163, 205, 0.72);
+    
+}
+
+.container-btnvoltar button {
+    padding: 5px;
+    position: absolute;
+    margin: 450px 160px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.container-btnvoltar button:hover {
+    background-color: rgba(117, 163, 205, 0.72);
+}
+
+.container-action h2 {
+    position: absolute;
+    margin: 180px 70px;
+}
+
+.container-form {
+    position: absolute;
+    margin: 80px 250px;
+    align-content: flex-start;
+}

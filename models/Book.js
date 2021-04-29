@@ -6,8 +6,9 @@ module.exports = (sequelize, DataTypes) =>{
             author: DataTypes.STRING,
             description: DataTypes.STRING,
             publisher: DataTypes.STRING,
-            generes_id: DataTypes.INTEGER,
-            users_id: DataTypes.INTEGER
+            generes_id: DataTypes.STRING,
+            users_id: DataTypes.STRING,
+            cover: DataTypes.STRING
         }, {
             tableName: "books",
             timestamps: false

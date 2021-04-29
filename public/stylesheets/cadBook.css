@@ -51,7 +51,7 @@
 .container-btnvoltar button {
     padding: 5px;
     position: absolute;
-    margin: 450px 160px;
+    margin: 480px 160px;
     background-color: transparent;
     font-weight: bold;
     border-radius: 5px;
@@ -73,9 +73,45 @@
 
 .container-form form{
     position: absolute;
-    margin: 100px 450px;
 }
 
 .container-form form .form-name {
-    padding: 30px;
+    padding: 30px 10px 5px;
+}
+
+.container-form form .form-author {
+    padding: 30px 10px 5px;
+}
+
+.container-form form .form-publisher {
+    padding: 30px 10px 5px;
+}
+
+.container-form form .form-generes {
+    padding: 30px 10px 5px;
+}
+
+.container-form form .form-description {
+    padding: 30px 10px 5px;
+}
+
+.upload-cover {
+    position: relative;
+    width: 180px;
+    margin: 0px 400px;
+    padding: 30px 10px 5px;
+    flex-direction: row;
+}
+
+.upload-cover .btn-upload button{
+    padding: 5px;
+    position: absolute;
+    margin: 80px 20px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.upload-cover .btn-upload button:hover{
+    background-color: rgba(117, 163, 205, 0.72);
 }

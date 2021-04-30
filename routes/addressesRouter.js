@@ -5,6 +5,7 @@ const addressesController = require('../Controller/addressesControler');
 
 /* GET users listing. */
 router.get('/', addressesController.index);
+router.get('/endereco', addressesController.endereco);
 router.post('/', addressesController.create);
 router.put('/:id', addressesController.update);
 router.delete('/:id', addressesController.delete);

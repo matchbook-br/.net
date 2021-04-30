@@ -24,6 +24,10 @@ header{
    padding: 10px;
    
 }
+.logo{
+  width: 60px;
+  height: 60px;
+}
 
 header .container {
   display: flex;

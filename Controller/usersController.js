@@ -19,9 +19,16 @@ const usersController = {
     },
 
     create: async (req, res) => {
-        const { name, email,  password, gender, date_of_birth, phone_number, addresses_id } = req.body;
+        const { name, email,  password, gender, date_of_birth, phone_number, street,
+            number,
+            complement,
+            neighborhood,
+            city,
+            state,
+            zip_code} = req.body;
         
         const passwordCrypt = bcrypt.hashSync(password, 10);
+        const user_id = uuidv4();
        
         const newUsers = await User.create({
             id: uuidv4(),
@@ -31,7 +38,14 @@ const usersController = {
             gender,
             date_of_birth,
             phone_number,
-            addresses_id 
+            street,
+            number,
+            complement,
+            neighborhood,
+            city,
+            state,
+            zip_code
+            
         });
 
 
@@ -40,16 +54,28 @@ const usersController = {
 
     update: async (req, res) => {
         const { id } = req.params;
-        const { name, email,  password, gender, date_of_birth, phone_number, addresses_id } = req.body;
+        const { name, email,  password, gender, date_of_birth, phone_number, street,
+            number,
+            complement,
+            neighborhood,
+            city,
+            state,
+            zip_code} = req.body;
 
         const user = await User.update({
             name,
-            password,
             email,
-            date_of_birth,
+            password: passwordCrypt,
             gender,
+            date_of_birth,
             phone_number,
-            addresses_id
+            street,
+            number,
+            complement,
+            neighborhood,
+            city,
+            state,
+            zip_code
         }, {
             where: { id }
         });

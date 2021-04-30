@@ -10,6 +10,7 @@ const usersController = {
         return res.json(users);
     },
 
+
     registro: (req, res) => {
         return res.render('registro')
     },
@@ -17,6 +18,12 @@ const usersController = {
     meuperfil: (req, res) =>{
         return res.render('meuperfil')
     },
+
+
+    login: (req, res) =>{
+        return res.render('login')
+    },
+    
 
     create: async (req, res) => {
         const { name, email,  password, gender, date_of_birth, phone_number, street,

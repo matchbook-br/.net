@@ -1,8 +1,8 @@
 module.exports = {
-    "username": "root",
-    "password": "3428",
+    "username": "matchbook@matchbook-pi",
+    "password": "mbook#pi@2021",
     "database": "matchbook",
-    "host": "127.0.0.1",
+    "host": "matchbook-pi.mysql.database.azure.com",
     "dialect": "mysql",
     "port": "3306"
 }

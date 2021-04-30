@@ -10,6 +10,11 @@
   
   }
 
+form input {
+    height: 30px;
+    width: 200px;
+}
+
 .container .inicio{
     position: absolute;
     width: 1318px;
@@ -93,25 +98,31 @@
 
 .container-form form .form-description {
     padding: 30px 10px 5px;
+    height: 100px;
 }
 
-.upload-cover {
-    position: relative;
-    width: 180px;
-    margin: 0px 400px;
-    padding: 30px 10px 5px;
-    flex-direction: row;
-}
-
-.upload-cover .btn-upload button{
+.container-form .cta-cadastro button {
     padding: 5px;
-    position: absolute;
-    margin: 80px 20px;
+    margin: 30px 300px;
+    width: 200px;
     background-color: transparent;
     font-weight: bold;
     border-radius: 5px;
 }
 
-.upload-cover .btn-upload button:hover{
+.container-form .cta-cadastro button:hover {
     background-color: rgba(117, 163, 205, 0.72);
+}
+
+.form-cover form {
+    position: absolute;
+    margin: 130px 900px;
+}
+
+.form-cover form img {
+    padding: 20px 50px;
+}
+
+.form-cover form input {
+    padding: 20px 0px;
 }

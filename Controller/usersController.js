@@ -10,6 +10,9 @@ const usersController = {
         return res.json(users);
     },
 
+    mybooks: (req, res) => {
+        return res.render('mybooks')
+    },
 
     registro: (req, res) => {
         return res.render('registro')

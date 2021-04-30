@@ -10,6 +10,10 @@ const usersController = {
         return res.json(users);
     },
 
+    login: (req, res) =>{
+        return res.render('login')
+    },
+    
     create: async (req, res) => {
         const { name, email,  password, gender, date_of_birth, phone_number, addresses_id } = req.body;
         

@@ -12,7 +12,7 @@ const booksController = {
     },
 
     create: async (request, response) => {
-        let { name, author, description, publisher, generes_id, users_id } = request.body;
+        let { name, author, description, publisher, generes_id, users_id, cover } = request.body;
 
         let newBook = await Book.create({
             id: uuidv4(),
@@ -21,14 +21,15 @@ const booksController = {
             description,
             publisher,
             generes_id,
-            users_id
+            users_id,
+            cover
         });
 
         return response.json(newBook);
     },
     update: async (request, response) => {
         let { id } = request.params;
-        let { name, author, description, publisher, generes_id, users_id } = request.body;
+        let { name, author, description, publisher, generes_id, users_id, cover } = request.body;
 
         let updatedBook = await Book.update({
             name,
@@ -36,7 +37,8 @@ const booksController = {
             description,
             publisher,
             generes_id,
-            users_id
+            users_id,
+            cover
         }, {
             where: { id }
         })

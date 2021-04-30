@@ -126,3 +126,12 @@ form input {
 .form-cover form input {
     padding: 20px 0px;
 }
+
+.footer {
+    position: absolute;
+    width: 1282px;
+    height: 57px;
+    left: 0px;
+    top: 587px;
+    background: #75A3CD;
+}

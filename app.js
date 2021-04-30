@@ -9,7 +9,6 @@ var addressesRouter = require('./routes/addressesRouter');
 var booksRouter = require('./routes/booksRouter');
 var interestsRouter = require('./routes/interestsRouter');
 var generesRouter = require('./routes/generesRouter');
-var cadBookRouter = require('./routes/cadBookRouter');
 var matchbookRouter = require('./routes/matchbookRouter');
 
 var app = express();
@@ -29,7 +28,6 @@ app.use('/addresses', addressesRouter);
 app.use('/books', booksRouter);
 app.use('/interests', interestsRouter);
 app.use('/generes', generesRouter);
-app.use('/cadBook', cadBookRouter);
 app.use('/matchbooks', matchbookRouter);
 
 // catch 404 and forward to error handler

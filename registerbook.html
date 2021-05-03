@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/stylesheets/registerbook.css">
-        <title>Match Book</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/stylesheets/registerbook.css">
+    <title>Match Book</title>
+</head>
+
 <body>
     <header class="container">
         <div class="inicio">
@@ -19,19 +21,19 @@
                 <div class="container-action">
                     <img src="/img/bibliobook.png" alt="logo" class="background">
                         <nav>
-                            <button class="botao-matches" type="menu" href="views/">MATCHES</button>
-                            <button class="botao-livros" type="menu" href="views/">LIVROS</button>
-                            <button class="botao-perfil" type="menu" href="views/">MEU PERFIL</button>
+                            <button class="botao-matches" type="menu">MATCHES</button>
+                            <button class="botao-livros" type="menu">LIVROS</button>
+                            <button class="botao-perfil" type="menu">MEU PERFIL</button>
                         </nav> 
                         <h2>CADASTRE UM LIVRO</h2>
                 </div>
                 <div class="container-btnvoltar">
-                    <button onclick="document.location='books/registerbook'">Voltar</button>
+                    <button class="voltar" type="button">VOLTAR</button>
                 </div>
             </article>
             <article>
                     <div class="container-form">
-                        <form action="/books/registerbook" method="POST">
+                        <form action="/books" method="POST">
                             <div class="form-name">
                                <strong class="name">TÍTULO:</strong>
                                 <input type="text" name="name" id="input_titulo" placeholder="Título do livro"> 
@@ -105,6 +107,7 @@
                             
                         </form>
                     </div>
+                        
                 </article>
         </section>
     </main>

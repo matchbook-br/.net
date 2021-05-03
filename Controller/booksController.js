@@ -15,6 +15,10 @@ const booksController = {
         return res.render('registerbook')
     },
 
+    registerbook: (req, res) => {
+        return res.render('registerbook')
+    },
+
     create: async (request, response) => {
         let { name, author, description, publisher, generes_id, users_id, cover } = request.body;
 

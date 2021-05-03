@@ -10,6 +10,10 @@ const booksController = {
 
         return response.render('books', { listaBooks: books });
     },
+    
+    registerbook: (req, res) =>{
+        return res.render('registerbook')
+    },
 
     create: async (request, response) => {
         let { name, author, description, publisher, generes_id, users_id, cover } = request.body;

@@ -19,7 +19,7 @@ const usersController = {
     },
 
     myprofile: (req, res) =>{
-        return res.render('myprofile')
+        return res.render('myprofile', {userlogin: req.session.usersOn})
     },
 
 
@@ -71,7 +71,6 @@ const usersController = {
             zip_code
             
         });
-
 
         return res.json(newUsers);
     },

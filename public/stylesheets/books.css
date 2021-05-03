@@ -51,6 +51,13 @@ section.principal article {
     background-repeat: no-repeat;
 }
 
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
 .exibithion {
     display: flex;
     flex-wrap: wrap;

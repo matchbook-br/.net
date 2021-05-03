@@ -10,6 +10,7 @@
 body {
     padding: 0;
     margin: 0;
+    width: 100vw;
 
 }
 
@@ -25,34 +26,50 @@ header{
    background: #AA6DC7;
    display: flex;
    flex-direction: row;
-   justify-content: space-between; 
-   padding: 10px;
+   height: 15%;
+   width: 100%;
+   flex-grow: 1;
+   position: absolute;
+
+  
    
 }
 .logo{
-  width: 85px;
-  height: 85px;
+  width: 80px;
+  height: 80px;
+  padding: 0;
 }
 
 header .container {
   display: flex;
- 
   align-items: center;
 }
 
 header .btn-entrar {
   width: 200px;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: Rhodium Libre;
   color: black;
-}
-header .idioma {
+  
+  
 
+}
+
+header .btn-enter{
+    display: flex;
+    justify-content: flex-end;
+    height: 35px;
+    margin-top: 1.5%;
+    margin-right: 0em;
+}
+
+header .idioma {
     width: 132px;
     height: 40px;
-    margin-right: 30px;
+    margin-left: 1300px;
     margin-top: 40px;
 
     font-family: Rhodium Libre;
@@ -89,30 +106,33 @@ header button:hover {
 /*  INÍCIO DO FOOTER  */
 
 footer {
-    position: fixed;
-    width: 100%;
-    height: 10.5%;
+    position: absolute;
+    display: flex;
+    flex-grow: 1;
+    width: 100vw;
+    min-height: 10.5%;
     left: 0px;
-    bottom: 0;
+    top: 100%;
 
     background: #75A3CD;
-
 }
 
 footer .roda-pe {
     position: absolute;
+    max-height: 10.5%;
 
     height: 24px;
-    left: calc(50% - 300px/2);
+    left: calc(50% - 294px/2);
     top: 15%;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 0.75em;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: max(0.75em,10.5%);
+    
 
 
-color: #000000;
+    color: #000000;
 
 }
 /*  FIM DO FOOTER  */

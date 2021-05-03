@@ -126,3 +126,26 @@ form input {
 .form-cover form input {
     padding: 20px 0px;
 }
+
+header {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    /* margin-bottom: 30px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    justify-content: space-between;
+    background: #AA6DC7;
+  }
+
+  button:hover{
+    transition: 0.3s;
+    color: white;
+    border: 10px;
+   border: white;
+  }
+  .logo{
+    width: 60px;
+    height: 60px;
+  }

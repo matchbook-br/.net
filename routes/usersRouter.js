@@ -8,8 +8,8 @@ router.get('/', usersController.index);
 
 router.get('/mybooks', usersController.mybooks);
 
-router.get('/registro', usersController.registro);
-router.get('/meuperfil', usersController.meuperfil);
+router.get('/registeruser', usersController.registeruser);
+router.get('/myprofile', usersController.myprofile);
 router.post('/', ValidarCadasto, usersController.create);
 
 router.get('/login' , usersController.login)

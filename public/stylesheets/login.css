@@ -58,6 +58,13 @@ button {
     border-radius: 5px;
 }
 
+header button:hover {
+    transition: 0.3s;
+    color: white;
+    border: 10px;
+   border: white;
+  }
+
 .idioma {
     position: absolute;
     width: 132px;
@@ -136,6 +143,8 @@ main span {
     color: #000000;
 
 }
+
+
 
 .botoes .btn-google button img{
     float: left;
@@ -241,3 +250,11 @@ color: #000000;
     width: 100%;
     vertical-align: top;
 }
+
+
+button:hover{
+    transition: 0.3s;
+    color: white;
+    border: 10px;
+   border: white;
+  }

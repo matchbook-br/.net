@@ -14,12 +14,12 @@ const usersController = {
         return res.render('mybooks')
     },
 
-    registro: (req, res) => {
-        return res.render('registro')
+    registeruser: (req, res) => {
+        return res.render('registeruser')
     },
 
-    meuperfil: (req, res) =>{
-        return res.render('meuperfil')
+    myprofile: (req, res) =>{
+        return res.render('myprofile')
     },
 
 

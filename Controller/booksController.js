@@ -5,18 +5,20 @@ const { v4:uuidv4 } = require('uuid');
 
 
 const booksController = {
-    index: async (request, response) => {
+    index: async (req, res) => {
         let books = await Book.findAll();
 
-        return response.render('mybooks', { listaBooks: books });
+        return res.json(books);
     },
-    
-    registerbook: (req, res) =>{
-        return res.render('registerbook')
-    },
+    // index: async (request, response) => {
+    //     let books = await Book.findAll();
 
-    registerbook: (req, res) => {
-        return res.render('registerbook')
+    //     return response.render('mybooks', { listaBooks: books });
+    // },
+    
+    registerbook: (request, response) =>{
+        
+        return response.render('registerbook')
     },
 
     create: async (request, response) => {

@@ -33,7 +33,7 @@
             </article>
             <article>
                     <div class="container-form">
-                        <form action="/books/registerbook" method="POST">
+                        <form action="/books" method="POST">
                             <div class="form-name">
                                <strong class="name">TÍTULO:</strong>
                                 <input type="text" name="name" id="input_titulo" placeholder="Título do livro"> 
@@ -87,25 +87,15 @@
                                 <strong class="description">SINOPSE:</strong>
                                 <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
                             </div>
-
+                            <div class="upload-cover">
+   
+                                <input type="text" name="cover" id="input_cover" placeholder="upload" multiple> 
+                                
+                            </div>
                             <div class="cta-cadastro">
                                 <button class="botao" type="submit">CADASTRAR LIVRO</button>
                             </div>
-                        </form> 
-                        
-                    </div>
-
-                    <div class="form-cover">
-                        <form>
-                            <div class="upload-cover">
-                                <strong class="cover">FOTO DA CAPA DO LIVRO:</strong>
-                                <img src="/img/upload.png" alt="upload" class="icon">
-                                <div class="btn-upload">
-                                <input type="file" name="cover" id="input_cover" placeholder="upload" multiple> 
-                                </div>
-                            </div>
-                            
-                        </form>
+                        </form>                  
                     </div>
                 </article>
         </section>

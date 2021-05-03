@@ -36,7 +36,7 @@ const usersController = {
 
         if (users && bcrypt.compareSync(password, users.password)) {
             req.session.usersOn = users;
-            return res.redirect('/');
+            return res.redirect('/users/myprofile');
         } else {
             return res.redirect('/users/login');
         }

@@ -8,7 +8,15 @@ const booksController = {
     index: async (request, response) => {
         let books = await Book.findAll();
 
-        return response.json(books);
+        return response.render('books', { listaBooks: books });
+    },
+    
+    registerbook: (req, res) =>{
+        return res.render('registerbook')
+    },
+
+    registerbook: (req, res) => {
+        return res.render('registerbook')
     },
 
     create: async (request, response) => {

@@ -5,6 +5,8 @@ var router = express.Router();
 const bookValidate = require('../middlewares/bookValidate')
 /* GET users listing. */
 router.get('/', booksController.index);
+router.get('/:id', booksController.show);
+router.get('/registerbook', booksController.registerbook);
 router.get('/:id', booksController.show)
 router.post('/', bookValidate, booksController.create);
 router.put('/:id', booksController.update);

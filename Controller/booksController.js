@@ -5,22 +5,24 @@ const { v4:uuidv4 } = require('uuid');
 
 
 const booksController = {
-    index: async (request, response) => {
+    index: async (req, res) => {
         let books = await Book.findAll();
 
-        return response.render('mybooks', { listaBooks: books });
+        return res.json(books);
     },
-    
-    registerbook: (req, res) =>{
-        return res.render('registerbook')
-    },
+    // index: async (request, response) => {
+    //     let books = await Book.findAll();
 
-    registerbook: (req, res) => {
-        return res.render('registerbook')
+    //     return response.render('mybooks', { listaBooks: books });
+    // },
+    
+    registerbook: (request, response) =>{
+        
+        return response.render('registerbook', {userlogin:request.session.usersOn})
     },
 
     create: async (request, response) => {
-        let { name, author, description, publisher, generes_id, users_id, cover } = request.body;
+        let { name, author, description, publisher, generes_id, cover } = request.body;
 
         let newBook = await Book.create({
             id: uuidv4(),
@@ -29,7 +31,7 @@ const booksController = {
             description,
             publisher,
             generes_id,
-            users_id,
+            users_id: request.session.usersOn,
             cover
         });
 

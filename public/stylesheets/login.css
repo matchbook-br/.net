@@ -23,6 +23,7 @@ main h2 {
 
     color: #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
 main span {
@@ -42,6 +43,7 @@ main span {
 
     color: #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 .email{
@@ -65,7 +67,9 @@ main span {
     color: #000000;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
+
 
 #input_email{
     position: absolute;
@@ -76,6 +80,7 @@ main span {
     
     background: #DEDEDE;
     border-radius: 10px;
+
 }
 
 .senha{
@@ -99,6 +104,7 @@ main span {
     color: #000000;
     
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 #input_senha{
@@ -110,6 +116,7 @@ main span {
 
     background: #DEDEDE;
     border-radius: 10px;
+
 }
 
 .botoes .btn-logar button{
@@ -132,3 +139,11 @@ main span {
     color: #000000;
 
 }
+
+button:hover{
+    transition: 0.3s;
+    color: white;
+    border: 10px;
+    border: white;
+
+  }

@@ -34,6 +34,7 @@
             <article>
                     <div class="container-form">
                         <form action="/books" method="POST">
+                            <input type="hidden" name="users_id" value="<%= userlogin.id %>">
                             <div class="form-name">
                                <strong class="name">TÍTULO:</strong>
                                 <input type="text" name="name" id="input_titulo" placeholder="Título do livro"> 
@@ -52,7 +53,7 @@
                                 
                             <div class="form-generes">
                                 <strong class="generes">GÊNERO:</strong>
-                                <select id="generes" name="generes">
+                                <select id="generes_id" name="generes_id">
                                     <option value="cf5ba5ed-b57b-4296-9836-50b2d53c1d13">Administração, Negócios e Economia</option>
                                     <option value="aea579f4-746f-4024-bd45-d77550676006">Arte, Cinema e Fotografia</option>
                                     <option value="dfa39558-06de-422d-8dfb-baa3b21d5e29">Artesanato, Casa e Estilo de Vida</option>

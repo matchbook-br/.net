@@ -1,5 +1,6 @@
 const { User, sequelize } = require('../models');
 const bcrypt = require('bcryptjs');
+const { v4:uuidv4 } = require('uuid');
 
 const usersController = {
 
@@ -9,19 +10,52 @@ const usersController = {
         return res.json(users);
     },
 
+    mybooks: (req, res) => {
+        return res.render('mybooks')
+    },
+
+    registro: (req, res) => {
+        return res.render('registro')
+    },
+
+    meuperfil: (req, res) =>{
+        return res.render('meuperfil')
+    },
+
+
+    login: (req, res) =>{
+        return res.render('login')
+    },
+    
+
     create: async (req, res) => {
-        const { name, password, email, date_of_birth, gender, phone_number, address_id } = req.body;
+        const { name, email,  password, gender, date_of_birth, phone_number, street,
+            number,
+            complement,
+            neighborhood,
+            city,
+            state,
+            zip_code} = req.body;
         
         const passwordCrypt = bcrypt.hashSync(password, 10);
-        
+        const user_id = uuidv4();
+       
         const newUsers = await User.create({
+            id: uuidv4(),
             name,
-            password: passwordCrypt,
             email,
-            date_of_birth,
+            password: passwordCrypt,
             gender,
+            date_of_birth,
             phone_number,
-            address_id
+            street,
+            number,
+            complement,
+            neighborhood,
+            city,
+            state,
+            zip_code
+            
         });
 
 
@@ -30,16 +64,28 @@ const usersController = {
 
     update: async (req, res) => {
         const { id } = req.params;
-        const { name, password, email, date_of_birth, gender, phone_number, address_id } = req.body;
+        const { name, email,  password, gender, date_of_birth, phone_number, street,
+            number,
+            complement,
+            neighborhood,
+            city,
+            state,
+            zip_code} = req.body;
 
         const user = await User.update({
             name,
-            password,
             email,
-            date_of_birth,
+            password: passwordCrypt,
             gender,
+            date_of_birth,
             phone_number,
-            address_id
+            street,
+            number,
+            complement,
+            neighborhood,
+            city,
+            state,
+            zip_code
         }, {
             where: { id }
         });

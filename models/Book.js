@@ -7,7 +7,10 @@ module.exports = (sequelize, DataTypes) =>{
             description: DataTypes.STRING,
             publisher: DataTypes.STRING,
             generes_id: DataTypes.INTEGER,
-            users_id: DataTypes.INTEGER
+            users_id: DataTypes.INTEGER,
+            generes_id: DataTypes.STRING,
+            users_id: DataTypes.STRING,
+            cover: DataTypes.STRING
         }, {
             tableName: "books",
             timestamps: false
@@ -15,8 +18,8 @@ module.exports = (sequelize, DataTypes) =>{
     );
 
     Book.associate = (models) => {
-        Book.belongsTo(models.User, { as: "user", foreignKey: "users_id" });
-        Book.belongsTo(models.Genere, { as: "genere", foreignKey: "generes_id" });
+        Book.belongsTo(models.User, { as: "users", foreignKey: "users_id" });
+        Book.belongsTo(models.Genere, { as: "generes", foreignKey: "generes_id" });
     };
 
     return Book;

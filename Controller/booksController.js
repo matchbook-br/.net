@@ -1,31 +1,39 @@
 
 const { request, response } = require('express');
 const { Book, sequelize } = require('../models/');
+const { v4:uuidv4 } = require('uuid');
+
 
 const booksController = {
     index: async (request, response) => {
         let books = await Book.findAll();
 
-        return response.json(books);
+        return response.render('books', { listaBooks: books });
+    },
+    
+    registerbook: (req, res) =>{
+        return res.render('registerbook')
     },
 
     create: async (request, response) => {
-        let { name, author, description, publisher, generes_id, users_id } = request.body;
+        let { name, author, description, publisher, generes_id, users_id, cover } = request.body;
 
         let newBook = await Book.create({
+            id: uuidv4(),
             name,
             author,
             description,
             publisher,
             generes_id,
-            users_id
+            users_id,
+            cover
         });
 
         return response.json(newBook);
     },
     update: async (request, response) => {
         let { id } = request.params;
-        let { name, author, description, publisher, generes_id, users_id } = request.body;
+        let { name, author, description, publisher, generes_id, users_id, cover } = request.body;
 
         let updatedBook = await Book.update({
             name,
@@ -33,7 +41,8 @@ const booksController = {
             description,
             publisher,
             generes_id,
-            users_id
+            users_id,
+            cover
         }, {
             where: { id }
         })

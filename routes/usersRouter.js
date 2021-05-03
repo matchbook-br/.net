@@ -13,6 +13,7 @@ router.get('/myprofile', usersController.myprofile);
 router.post('/', ValidarCadasto, usersController.create);
 
 router.get('/login' , usersController.login)
+router.post('/login', usersController.auth);
 router.post('/', usersController.create);
 
 router.put('/:id', usersController.update);

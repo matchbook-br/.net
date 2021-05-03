@@ -27,6 +27,20 @@ const usersController = {
         return res.render('login')
     },
     
+    auth: async (req, res) => {
+        const { email, password } = req.body;
+
+        const users = await User.findOne({
+            where: { email }
+        });
+
+        if (users && bcrypt.compareSync(password, users.password)) {
+            req.session.usersOn = users;
+            return res.redirect('/');
+        } else {
+            return res.redirect('/users/login');
+        }
+    },
 
     create: async (req, res) => {
         const { name, email,  password, gender, date_of_birth, phone_number, street,

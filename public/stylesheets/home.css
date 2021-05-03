@@ -48,10 +48,17 @@ header p {
 }
 header button{
   background: #A1C8EB;
-  border: none;
+  
   border-radius: 10px;
   width: 80px;
   height: 35px;
+}
+
+header button:hover {
+  transition: 0.3s;
+  color: white;
+  border: 10px;
+ border: white;
 }
 
 section.wrap-main .container{
@@ -65,7 +72,7 @@ section.wrap-main .container{
 
 section.wrap-main button{
   background: #A1C8EB;
-  border: none;
+  
   border-radius: 10px;
   width: 300px;
   height: 35px;
@@ -75,6 +82,14 @@ section.wrap-main button{
   margin-bottom: 10px;
 
 }
+
+section.wrap-main button:hover{
+  transition: 0.3s;
+  color: white;
+  border: 10px;
+ border: white;
+}
+
 section.wrap-main .log-main{
   display: inline-flexbox;
   
@@ -102,15 +117,16 @@ section.wrap-submain article {
   
 }
 
-section.wrap-submain article div {
-  font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
+section.wrap-submain article .bloco {
+ font-family: Roboto;
+ font-style: normal;
+ font-weight: normal;
+ font-size: 18px;
+ line-height: 21px;
  color: #000000;
-  margin: 20px;
-  text-align: justify;
+ margin: 20px;
+ text-align: justify;
+ 
 }
 
 footer{

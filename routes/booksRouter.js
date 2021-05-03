@@ -7,6 +7,7 @@ const bookValidate = require('../middlewares/bookValidate')
 router.get('/', booksController.index);
 router.get('/:id', booksController.show);
 router.get('/registerbook', booksController.registerbook);
+router.get('/:id', booksController.show)
 router.post('/', bookValidate, booksController.create);
 router.put('/:id', booksController.update);
 router.delete('/:id',booksController.delete);

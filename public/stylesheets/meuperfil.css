@@ -292,6 +292,15 @@ align-items: center;
 color: #000000;
 }
 
+.update{
+    position: absolute;
+    width: 334px;
+    height: 70px;
+    left: 130px;
+    top: 550px;
+    
+}
+
 footer{
     position: absolute;
 width: 100%;

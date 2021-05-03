@@ -30,7 +30,6 @@ section.principal .container {
 section.principal article {
     width: 500px;
     max-width: 100%;
-    height: 580px;
 }
 
 .board div {
@@ -41,14 +40,15 @@ section.principal article {
     height: 20px;
     display: flex;
     justify-content: space-around;
+    margin-top: 15px;
 }
 
 .livro-img {
     width: 100%;
+    max-width: 100%;
     height: 540px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .exibithion {
@@ -58,13 +58,13 @@ section.principal article {
 }
 
 .exibithion div {
-    width: 125px;
-    height: 125px;
+    width: 250px;
+    height: 350px;
     background-position: center;
     background-size: cover;
     border: 1px solid black;
     border-radius: 10px;
-    margin: 15px;
+    margin: 5px;
 }
 
 footer {

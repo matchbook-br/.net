@@ -18,11 +18,11 @@ const booksController = {
     
     registerbook: (request, response) =>{
         
-        return response.render('registerbook', {userlogin:request.session.usersOn})
+        return response.render('registerbook', { userlogin:request.session.usersOn })
     },
 
     create: async (request, response) => {
-        let { name, author, description, publisher, generes_id, cover } = request.body;
+        let { name, author, description, publisher, generes_id, cover, users_id } = request.body;
 
         let newBook = await Book.create({
             id: uuidv4(),
@@ -31,7 +31,7 @@ const booksController = {
             description,
             publisher,
             generes_id,
-            users_id: request.session.usersOn,
+            users_id,
             cover
         });
 

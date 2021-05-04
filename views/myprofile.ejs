@@ -14,8 +14,9 @@
 
         <header class="conteiner">
             <div class="incio">
+                
                 <img src="/img/avata.png" alt="fotodousuario" class="avata">
-                <h3 class="nomedousuario">Olá, ${nome} </h3>
+                <h3 class="nomedousuario">Olá, <%= userlogin.name %> </h3>
             </div>
         </header>
         <main>
@@ -26,15 +27,15 @@
                         <h2>Configurações da conta</h2>
                         <p class="n">NOME:</p>
                         <div class="nome">
-                            <p>${nome do usuario}</p>
+                            <p><%= userlogin.name %> </p>
                         </div>
                         <p class="telefone">Número:</p>
                         <div class="numero">
-                            <p>${numero do usuario}</p>
+                            <p><%= userlogin.phone_number %> </p>
                         </div>
                         <p class="e">E-Mail:</p>
                         <div class="email">
-                            <p>${email do usuario}</p>
+                            <p><%= userlogin.email %> </p>
                         </div>
                         <div class="cta-cadastro">
                             <button class="botao" type="submit"> VOLTAR</button>
@@ -46,7 +47,7 @@
                     <div class="update">
                         <p><a href="update.html">Atualize seus dados</a></p> 
                     </div>
-                    <p class="info">${nomeusuario}${idade}</p>
+                    <p class="info"><%= userlogin.name %> </p>
                 </div>
                
             </section>

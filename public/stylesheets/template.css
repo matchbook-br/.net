@@ -3,140 +3,131 @@
 
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    
+  padding: 0;
+  margin: 0;
 
 }
 
 .container {
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
-  }
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
 
 /*  INÍCIO DO HEADER_BEFORE  */
 
-header{
-   background: #AA6DC7;
-   display: flex;
-   flex-direction: row;
-   height: 85px;
-   width: auto;
-   flex-grow: 1;
-   position: absolute;
-
+header {
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 84px;  
   
-   
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  background: #AA6DC7;
+
 }
+
 .logo{
   width: 80px;
   height: 80px;
   padding: 0;
+
 }
 
 header .container {
   display: flex;
   align-items: center;
   width: 100%;
-}
-
-header .btn-entrar {
-  width: 200px;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: Rhodium Libre;
-  color: black;
-  
-  
-
-}
-
-header .btn-enter{
-    display: flex;
-    justify-content: flex-end;
-    height: 35px;
-    margin-top: 1.5%;
-    margin-right: 0em;
-}
-
-header .idioma {
-    width: 132px;
-    height: 40px;
-    margin-left: 1300px;
-    margin-top: 40px;
-
-    font-family: Rhodium Libre;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
-
-    display: flex;
-    align-self: flex-end;
-
- 
-
-    color: #000000;
 
 }
 
 header button{
-  background: #A1C8EB;
-  
+  position: absolute;
+  width: 92px;
+  height: 30px;
+  left: 1160px;
+  top: 30px;
+  font-family: Rhodium Libre;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+    
+  align-items: center;
+
+  color: #131212;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  width: 80px;
-  height: 35px;
+  background: #A1C8EB;
+ 
+}
+
+header .idioma {
+  position: absolute;
+  width: 132px;
+  height: 40px;
+  left: 1036px;
+  top: 15px;
+
+  font-family: Rhodium Libre;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 65px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+
 }
 
 header button:hover {
   transition: 0.3s;
   color: white;
   border: 10px;
- border: white;
+  border: white;
+
 }
 
 /*  FIM DO HEADER_BEFORE  */
 
 /*  INÍCIO DO FOOTER  */
 
-footer {
-    position: absolute;
-    display: flex;
-    flex-grow: 1;
-    
-    width: 100em;
-    height: 10.5%;
-    left: 0 auto;
-    bottom: -60px;
+footer{
+  position: absolute;
+  width: 100%;
+  height: 57px;
+  left: 0px;
+  top: 560px;
 
-    background: #75A3CD;
-}
-
-footer .roda-pe {
-    position: absolute;
-    display: flex;
-    max-height: 10.5%;
-
-    height: 24px;
-    left: 485px;
-    top: 15%;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: max(0.75em,10.5%);
-    justify-content: space-around;
-    
-
-
-    color: #000000;
+  background: #75A3CD;
 
 }
+
+footer .roda-pe{
+  position: absolute;
+
+  height: 24px;
+  left: 500px;
+  top: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+
+  color: #000000;
+  
+}
+
 /*  FIM DO FOOTER  */

@@ -33,7 +33,7 @@
             </article>
             <article>
                     <div class="container-form">
-                        <form action="/books" method="POST">
+                        <form action="/books" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="users_id" value="<%= userlogin.id %>">
                             <div class="form-name">
                                <strong class="name">TÍTULO:</strong>
@@ -88,14 +88,18 @@
                                 <strong class="description">SINOPSE:</strong>
                                 <input type="text" name="description" id="input_description" placeholder="Sinopse do livro">
                             </div>
-                            <div class="upload-cover">
-   
-                                <input type="text" name="cover" id="input_cover" placeholder="upload" multiple> 
-                                
-                            </div>
+
+                            <form action="/public/uploads/" enctype="multipart/form-data">
+                                <div class="upload-cover">
+                                    <input type="file" name="cover" accept="image/*">
+                                    <button type="submit">Carregar imagem</button> 
+                                </div>
+                            </form>
+
                             <div class="cta-cadastro">
                                 <button class="botao" type="submit">CADASTRAR LIVRO</button>
                             </div>
+
                         </form>                  
                     </div>
                 </article>

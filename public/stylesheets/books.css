@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 10px;
+    background: #AA6DC7;
+}
+
+section.principal .container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+section.principal article {
+    width: 500px;
+    max-width: 100%;
+}
+
+.board div {
+    max-width: 100%;
+}
+
+.navigation {
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.livro-img {
+    width: 100%;
+    max-width: 100%;
+    height: 540px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.exibithion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.exibithion div {
+    width: 250px;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+footer {
+    padding: 20px;
+    background: #75A3CD; 
+}
+  
+footer p {
+    color: black;
+    text-align: center;
+}
